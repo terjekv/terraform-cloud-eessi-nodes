@@ -1,0 +1,12 @@
+#cloud-config
+
+users:
+  - name: eessi-ci
+    gecos: CI for EESSI
+    primary_group: users
+    groups: users, admin
+    ssh_import_id:
+      - gh:terjekv
+    lock_passwd: true
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIztkBkaEEpkg5tHl6m9tVY8YnbHv8riguCcII3kIgE1 ci@eessi
